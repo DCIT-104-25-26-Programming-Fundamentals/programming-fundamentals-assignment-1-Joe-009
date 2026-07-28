@@ -52,6 +52,45 @@
 
 #
 # =============================================================================
-# YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
+# # Multiplication Table Generator
+
+# Part A - Print the multiplication table for one number
+def single_table(number):
+    print(f"\nMultiplication Table for {number}:")
+    for i in range(1, 13):
+        print(f"{number} x {i:2} = {number * i}")
+
+
+# Part B - Print multiplication tables from 1 to N
+def multiple_tables(n):
+    if n <= 0:
+        print("Error: Please enter a positive integer.")
+        return
+
+    for num in range(1, n + 1):
+        print(f"\nMultiplication Table for {num}:")
+        for i in range(1, 13):
+            print(f"{num} x {i:2} = {num * i}")
+        print("---------------------------")
+
+
+# Main program
+def main():
+    # Part A
+    number = int(input("Enter a number: "))
+    single_table(number)
+
+    # Part B
+    n = int(input("\nEnter N: "))
+
+    if n <= 0:
+        print("Error: Please enter a positive integer.")
+        return
+
+    multiple_tables(n)
+
+
+# Run the program
+main()
 # =============================================================================
 
